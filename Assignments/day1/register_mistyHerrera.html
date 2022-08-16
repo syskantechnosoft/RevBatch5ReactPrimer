@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ID=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+    </head>
+    <body>
+        <h1>Hello World! Welcome to HTML.</h1>
+        <h2>Day 1 of HTML</h2>
+        <h3>
+            <ol>
+                <li>Introduction</li>
+                <li>Tag Reference</li>
+                <li>Attributes</li>
+            </ol>
+        </h3>
+        <form action="signup.html" method="POST" enctype="multipart/form-data"><!-- POST method and multipart/form-data enctype required to send form and upload file -->
+            <table border="5">
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>First Name:</td>
+                        <td><input name="fName" type="text" id="fName" required />
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Last Name:</td>
+                        <td><input name="lName" type="text" id="lName" required />
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Gender:</td>
+                        <td><input name="gender" type="radio" value="m" checked="true" /> Male<input name="gender" type="radio" value="f" /> Female</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Address:</td>
+                        <td><textarea name="address" id="address" cols="40" rows="5"></textarea> </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Date of Birth:</td>
+                        <td><input name="dob" type="text" id="dob" required />
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Email ID:</td>
+                        <td><input name="email" type="email" id="email" required />
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Mobile:</td>
+                        <td><input name="mobile" type="text" id="mobile" required />
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Twitter:</td>
+                        <td><input name="twitter" type="text" id="twitter" required />
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>URL:</td>
+                        <td><input name="url" type="text" id="url"/>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Profile:</td>
+                        <td><input name="fileToUpload" type="file" id="file" />
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="reset" value="Clear" /></td>
+                        <td><input type="submit" name="register" id="register" value="Register" /></td>
+                    </tr>
+                </tbody>
+            </table>    
+        </form>
+    </body>
+</html>
