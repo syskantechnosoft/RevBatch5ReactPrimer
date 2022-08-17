@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Internal Java Script -->
+    <script src="myscript.js">
+        //single line comment
+        /* Multi line
+         comment */
+        //yet another single line comment
+
+
+    </script>
+
+    <script src="script1.js"></script>
+    <script>
+
+        var value = 50;//global variable  
+        function a() {
+            console.log("value :" + value);
+        }
+        function b() {
+            // alert(value);
+            console.log("value :" + value);
+        }
+        // a();
+        b();
+    </script>
+
+    <h1> My Heading</h1>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+    <!-- Inline Javascript -->
+    <button type="button"
+        onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"; document.getElementById("demo").style.fontSize="35px"; document.getElementById("demo").style.display="block"'>Click
+        Me!</button>
+</body>
+
+</html>

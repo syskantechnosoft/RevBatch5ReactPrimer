@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body bgcolor="blue"> <!-- Inline CSS added to the html tag as an attribute -->
+    <!-- Internal CSS using style tag--> 
+    <style>  
+        body {
+            /* single line comment; */
+            background-color: green;
+        }
+
+        form {
+            background-color: aqua;
+            text-align: center;
+            /* align : center; */
+        }
+        
+    </style>
+    <h1>Hello World!!!!Welcome to HTML.</h1> <!--  Sibling Tag -->
+    <!-- HTML Element-->
+
+    <h2>Day 1 of HTML </h2> <!--  Sibling Tag -->
+    <h3>
+        <!-- Parent Tag -->
+        <ol>
+            <!-- Child Tag -->
+            <li> Introduction </li> <!-- Grand child -->
+            <li> Tag Refernce </li>
+            <li> Attributes </li>
+        </ol>
+    </h3>
+    <form action="signup.html" method="GET" id="form1">
+        <table border="5" align="center">
+            <thead>
+                <tr>
+                    <th> Sl No </th>
+                    <th> Key </th>
+                    <th> Value </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 1. </td>
+                    <td> First Name :</td>
+                    <td> <input name="fName" type="text" id="fName" required /> </td>
+                </tr>
+                <tr>
+                    <td> 2. </td>
+                    <td> Last Name :</td>
+                    <td> <input name="lName" type="text" id="lName" required /> </td>
+                </tr>
+                <tr>
+                    <td> 3. </td>
+                    <td> Gender :</td>
+                    <td> <input name="gender" type="radio" value="m" /> Male <input name="gender" type="radio"
+                            value="f" />
+                        FeMale </td>
+                </tr>
+                <tr>
+                    <td> 4. </td>
+                    <td> Address :</td>
+                    <td> <textarea name="address" id="address" cols="40" rows="5"></textarea> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="reset" value="Clear" /> </td>
+                    <td> <input type="submit" name="register" id="register" value="Register"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+    <div>
+        <p> First Para </p>
+        <p> Second Para with 
+            different spaces between                       the             content.
+
+
+            Second para is 
+
+
+            big one.
+
+
+        </p>
+        <P> 
+            This is 
+
+
+            third
+
+            para.
+        </p>
+    </div>
+
+    <style>
+        div > p {
+            background-color: yellow;
+        }
+    </style>
+
+    <p>
+        PAra outside div
+    </p>
+
+
+    <div style="background-color: blueviolet;">
+        This is block level div
+    </div>
+
+    <span style="background-color: darkorange;">
+        This is inline span element. 
+    </span>
+
+    <span style="background-color:deeppink">
+        This is second inline span element. 
+    </span>
+
+
+    <div>
+
+        <p> Para inside div</p>
+    </div>
+
+
+</body>
+
+</html>
