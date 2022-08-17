@@ -50,9 +50,13 @@
                 </tr>
                 <tr>
                     <td>Gender :</td>
-                    <td><input name="gender1" type="radio" id="m" value="Male" required />Male<input name="gender2"
-                            type="radio" id="f" value="Female" required />Female<input name="gender3" type="radio"
-                            id="nb" value="Non-Binary" required />Non-Binary</td>
+                    <td><input name="gender" type="radio" id="m" required />
+                        <label for="m">Male</label>
+                        <input name="gender" type="radio" id="f" required />
+                        <label for="f">Female</label>
+                        <input name="gender" type="radio" id="nb" required />
+                        <label for="nb">Non-Binary</label>
+                    </td>
                 </tr>
                 <tr>
                     <td>Address :</td>
@@ -106,8 +110,8 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
-                    <td><input type="reset" value="Clear"><input type="submit" name="register" id="register" value="Register"></td>
+                    <td><input type="reset" value="Clear" onclick="ShowHideSpouse()">
+                        <input type="submit" name="register" id="register" value="Register"></td>
                 </tr>
             </tbody>
         </table>
