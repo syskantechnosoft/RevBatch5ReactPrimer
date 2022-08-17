@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <style>
+        body {
+            /*Internal CSS styling, method 2*/
+            background-color: red;
+        }
+    </style> -->
+
+    <script>
+        function maritalStatus() {
+            var marriageStatus = document.getElementById("married");
+            var spouseInfo = document.getElementById("spouse");
+            spouseInfo.style.display = marriageStatus.checked ? "block" : "none";
+        }
+    </script>
+
+    <h1>Hello World! Welcome to HTML</h1>
+
+    <h2>Day 1 of HTML</h2>
+
+    <h3>
+        <ol>
+            <li>Introduction</li>
+            <li>Tag reference</li>
+            <li>Attributes</li>
+        </ol>
+    </h3>
+
+    <form action="signup.html" method="GET">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th> Key </th>
+                    <th> Value </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> 1. </td>
+                    <td> First Name: </td>
+                    <td> <input name="fName" type="text" id="fName" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 2. </td>
+                    <td> Last Name: </td>
+                    <td> <input name="lName" type="text" id="lName" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 3. </td>
+                    <td> Gender: </td>
+                    <td> <input name="gender" type="radio" value="m" /> Male <input name="gender" type="radio"
+                            value="f" /> Female </td>
+                </tr>
+
+                <tr>
+                    <td> 4. </td>
+                    <td>Marital Status</td>
+                    <td><input type="radio" name="marital" id="married" onclick="maritalStatus()">
+                        <label for="married">Married</label>
+                        <input type="radio" name="marital" id="unmarried" onclick="maritalStatus()">
+                        <label for="unmarried">Unmarried</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <div id="spouse" style="display: none">
+                            Spouse Name:
+                            <input type="text" id="spousename">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> 5. </td>
+                    <td> Address :</td>
+                    <td> <textarea name="address" id="address" cols="40" rows="5"></textarea> </td>
+                </tr>
+
+                <tr>
+                    <td> 6. </td>
+                    <td> Date Of Birth: </td>
+                    <td> <input name="dob" type="text" id="dob" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 7. </td>
+                    <td> Email ID: </td>
+                    <td> <input name="email" type="text" id="email" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 8. </td>
+                    <td> Phone Number: </td>
+                    <td> <input name="mobile" type="text" id="mobile" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 9. </td>
+                    <td> Twitter: </td>
+                    <td> <input name="twitter" type="text" id="twitter" required /> </td>
+                </tr>
+
+                <tr>
+                    <td> 10. </td>
+                    <td> URL: </td>
+                    <td> <input name="url" type="text" id="url" required /> </td>
+                </tr>
+
+                <tr>
+                <td> 11. </td>
+                <td> Profile: </td>
+                <td> <input type="file" id="profile" id="profile" required /> </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td> <input type="reset" value="Clear" /> </td>
+                    <td> <input name="register" type="submit" id="register" value="Register"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
