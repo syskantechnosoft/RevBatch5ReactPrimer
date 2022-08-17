@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="max-width: 960px; margin: auto; padding: 20px; background-color: burlywood;">
+        <h1>Registration Page</h1>
+        <form name="profile" action="signup.html" method="get">
+            <table id="formTable">
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+                    <td>
+                        <input name="names" id="fname" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name
+                    </td>
+                    <td>
+                        <input name="names" id="lname" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        <input name="Gender" type="radio" value="male">Male<input name="Gender" type="radio" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address
+                    </td>
+                    <td>
+                        <textarea name="address" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date of Birth
+                    </td>
+                    <td>
+                        <input name="dob" type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        <input name="email" type="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number
+                    </td>
+                    <td>
+                        <input name="mobile" type="tel">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Twitter
+                    </td>
+                    <td>
+                        <input name="twitter" type="url">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Other URL
+                    </td>
+                    <td>
+                        <input name="URL" type="url">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Profile Picture
+                    </td>
+                    <td>
+                        <input name="profile" type="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Martial Status
+                    </td>
+                    <td id="martial">
+                        <input name="martial" type="radio" id="married" value="married" onclick="marriedOnClick()">Married<input name="martial" type="radio" id="single" value="single" onclick="singleOnClick()">Single
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+            <input name="register" id="register" type="submit" value="Submit">
+        </form>
+        <script>
+            function marriedOnClick(){
+                if(!document.getElementById("spouseRow")){
+                    let row = document.createElement("tr")
+                    row.setAttribute("id", "spouseRow")
+                    let name = document.createElement("td")
+                    let textBox = document.createElement("input")
+                    textBox.setAttribute("type", "text")
+                    let nameField = document.createElement("td").appendChild(textBox)
+                    name.innerHTML = "Spouse Name"
+                    row.appendChild(name)
+                    row.appendChild(nameField)
+                    document.getElementById("formTable").appendChild(row)
+                }
+            }
+
+            function singleOnClick(){
+                let element = document.getElementById("spouseRow")
+                if(element){
+                    element.remove()
+                }
+            }
+
+        </script>
+        <!---<script src="formscript.js" async defer></script>--->
+    </body>
+</html>
