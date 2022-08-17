@@ -27,7 +27,9 @@
     <script type="text/javascript">
         function ShowHideSpouse(){
             var married = document.getElementById("married");
-            var spouseText = document.getElementById("spouse");
+            var spouse = document.getElementById("spouse");
+            var spouseText = document.getElementById("spouseText");
+            spouse.style.display = married.checked ? "block" : "none";
             spouseText.style.display = married.checked ? "block" : "none";
         }
     </script>
@@ -59,6 +61,9 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Pronouns : </td>
+                </tr>
+                <tr>
                     <td>Address :</td>
                     <td><textarea name="address" id="address" cols="40" rows="5"></textarea></td>
                 </tr>
@@ -66,9 +71,6 @@
                     <td>DOB :</td>
                     <td>
                         <input name="DOB" type="date" id="dob" required />
-                        <!-- Day:<input name="Day" type="text" id="day" required /> 
-                        Month:<input name="Month" type="text" id="month" required />
-                        Year:<input name="Year" type="text" id="year" required /> -->
                     </td>
                 </tr>
                 <tr>
@@ -92,7 +94,7 @@
                     <td><input name="Profile" type="file" id="profile" required /></td>
                 </tr>
                 <tr>
-                    <td>Marital Status</td>
+                    <td>Marital Status :</td>
                     <td><input type="radio" name="marital" id="married" onclick="ShowHideSpouse()">
                         <label for="married">Married</label>
                         <input type="radio" name="marital" id="unmarried" onclick="ShowHideSpouse()">
@@ -100,10 +102,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td>
                         <div id="spouse" style="display: none">
-                            Spouse Name:
+                            Spouse Name :
+                        </div>
+                    </td>
+                    <td>
+                        <div id="spouseText" style="display: none">
                             <input type="text" id="spousename">
                         </div>
                     </td>
