@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //blocking operation
+        function call() {
+            alert("This is an alert box ");
+            x = prompt("Get a value from user");
+        }
+
+        call();
+        document.write(x);
+        //function definition / declaration (contains function keyword, function name, arguments and function body)
+        function getCube(n) {
+            //n is local variable
+            console.log("n is =" + n);
+            console.log("a is =" + a);
+            return (n * n * n);
+        }
+        a = 25;
+
+        function myfunc() {
+            console.log("a is =" + a);
+        }
+
+        //function invoking/calling a function
+        document.write(getCube(5));
+
+        myfunc();
+
+        document.writeln(n);
+
+
+
+
+    </script>
+</body>
+
+</html>

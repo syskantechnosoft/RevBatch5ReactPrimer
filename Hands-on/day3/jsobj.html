@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        employee = {};  //empty object
+        document.write(typeof (employee));
+
+        emp = { id: 100, firstName: "ABC", lastName: "XYZ", email: "abc@xyz.com" };
+        document.write("<br> emp object is =" + emp);
+        document.write("&#9252 <br> emp object is =" + emp.id + " " + emp.firstName + " " + emp.lastName + " " + emp.email);
+
+        //Creating object using new keyword and Object's default constructor (No Argumnet Constructor)
+        var emp = new Object();
+        emp.id = 101;
+        emp.name = "Ravi Malik";
+        emp.salary = 50000;
+        document.write("&#10  <br/>" + emp.id + " " + emp.name + " " + emp.salary);
+
+        //Creating object using new keyword and parameterized constructor
+        function emp1(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+        var e = new emp1(103, "Vimal Jaiswal", 30000);
+
+        document.write(e.id + " " + e.name + " " + e.salary);
+
+        document.write(" <br> typeof e =" + typeof(e));
+        document.write(" <br> typeof emp =" + typeof(emp));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Using Array literal method
+        var emp = ["Sonoo", "Vimal", "Ratan"];
+        for (i = 0; i < emp.length; i++) {
+            document.write(emp[i] + "<br/>");
+        }
+
+        document.write("typeof emp :" + typeof (emp));
+
+
+        i = 25;
+        document.write("<br> type of (i) =" + typeof (i));
+
+        i = "Hello";
+        document.write("<br> type of (i) =" + typeof (i));
+
+        i = false;
+        document.write("<br> type of (i) =" + typeof (i));
+
+        i = 'b';
+        document.write("<br> type of (i) =" + typeof (i));
+
+        i = { data: "value" };
+        document.write("<br> type of (i) =" + typeof (i));
+
+
+        //Using new keyword with Array's default constructor
+        var emp = new Array();
+        emp[0] = "Arun";
+        emp[1] = "Varun";
+        emp[2] = "John";
+
+        for (i = 0; i < emp.length; i++) {
+            document.write(emp[i] + "<br>");
+        }
+
+
+        //Using new keyword and Array's Parameterized constructor
+        var emp = new Array("Jai", "Vijay", "Smith");
+        for (i = 0; i < emp.length; i++) {
+            document.write(emp[i] + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

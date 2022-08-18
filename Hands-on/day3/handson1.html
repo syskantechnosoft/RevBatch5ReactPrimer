@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function add(a,b){
+            console.log("a =" + a.value + " b =" + b.value);
+            document.getElementById("demo").innerHTML = parseInt(a.value)+ parseInt(b.value);
+        }
+    </script>
+    <form action="">
+        <table>
+            <tr> <th> Name </th> <th> Value</th> </tr>
+            <tr> <td>Enter a Number : </td> <td> <input type="text" name="a" required/></td> </tr>
+            <tr> <td>Enter a Number : </td> <td> <input type="text" name="b" required/></td> </tr>
+            <tr> <td> <input type="reset" value="Clear"/>  </td> <td> <input type="button" value="Sum" onclick="add(a,b)"/> </td></tr>
+            <tr> <td> The Result is =</td>  <td> <p id="demo"> </p> </td></tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
