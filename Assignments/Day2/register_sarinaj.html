@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiz="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        function findAnswer() {
+            var area = document.createElement("TEXTAREA")
+            var textnode = document.createTextNode("")
+            area.appendChild(textnode)
+            document.getElementById("form-body").appendChild(area)
+
+            if (document.getElementById("rd1").checked == true) { //if Married then
+                alert("Married")
+                if (getGender() == "Female") {
+                    area.innerHTML = "Mrs"
+                    alert("Married Mrs!")
+                }
+                else if (getGender() == "Male") {
+                    area.innerHTML = "Mr"
+                    alert("Married Mr!")
+                }
+
+
+            }
+            else if (document.getElementById("rd2").checked == true) {
+                if (getGender() == "Female") {
+                    area.innerHTML = "Ms"
+                    alert("Unmarried Ms!")
+                }
+                else if (getGender() == "Male") {
+                    area.innerHTML = "Mr"
+                    alert("Unmarried Mr!")
+                }
+            }
+
+
+        }
+
+        function getGender() {
+            if (document.getElementById("gender-1").checked == true) {
+                return "Female"
+            }
+            else if (document.getElementById("gender-2").checked == true) {
+                return "Male"
+            }
+
+        }
+
+    </script>
+</head>
+
+<body style="color: yellowgreen;">
+    <div id="form-body">
+        <form action="signup.html" method="GET">
+            <h1>Registration Form</h1>
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="gender-1" name="Female">Female</input>
+            <input type="radio" id="gender-2" name="Male">Male</input> <br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="text" id="dob" name="dob"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+
+            <label for="number">Phone Number:</label><br>
+            <input type="text" id="number" name="number"><br>
+
+            <label for="twitter">Twitter:</label><br>
+            <input type="text" id="twitter" name="twitter"><br>
+
+            <label for="url">URL:</label><br>
+            <input type="text" id="url" name="url"><br>
+
+            <label for="myprofile">Profile:</label><br>
+            <input type="file" id="myprofile" name="myprofile"><br>
+
+            <label for="maritalStatus">Marital Status: </label><br>
+            <input onclick="findAnswer();" type="radio" id="rd1" name="marital" value="Married">Married</input>
+            <input onclick="findAnswer();" type="radio" id="rd2" name="marital" value="Unmarried">Unmarried</input>
+            <br><br>
+    </div>
+    </form>
+</body>
+
+</html>
