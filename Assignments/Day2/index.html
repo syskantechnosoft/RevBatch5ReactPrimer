@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Stuff</title>
+  </head>
+  <body bgcolor="green">
+    <!-- inline css change bgcolor -->
+    <style>
+      body {
+        background-color: blue; /* internal CSS using style tag */
+      }
+
+      #form1 {
+        background-color: aqua;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function vis(){
+        document.getElementById('row').style.visibility='visible';
+        document.getElementById('row').style.display='';
+        const gen = document.getElementById('gender');
+        const { checked } = gen;
+        if (checked == true)
+          document.getElementById('spouse').value='Mr.';
+          else
+          document.getElementById('spouse').value='Mrs.';
+        }
+    </script>
+    <h1>Form Exercise</h1>
+    <form action="signup.html" method="POST" id="form1">
+      <table border="5" align="center">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First Name</td>
+            <td><input name="fname" type="text" id="fName" /></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td><input name="lname" type="text" id="lName" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input id="gender" type="radio" value="m" />Male<input id="gender2"
+                name="gender2"
+                type="radio"
+                value="f"
+              />Female
+            </td>
+          </tr>
+          <tr>
+            <td>Marital Status</td>
+            <td>
+             <input name="married" type="radio" onclick="vis()" />Married
+              <input
+                id="radio"
+                name="unmarried"
+                type="radio"
+                value="u"
+              />Unmarried
+            </td>
+          </tr>
+          <tr id="row" style="visibility: hidden; display: none">
+            <td>Spouse Name</td>
+            <td>
+              <input id="spouse" type="text" />
+           </td>
+          </tr>
+
+          <tr>
+            <td>Address</td>
+            <td>
+              <textarea
+                name="address"
+                rows="5"
+                cols="50"
+                id="address"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>Date of Birth</td>
+            <td><input name="dob" type="date" id="dob" /></td>
+          </tr>
+          <tr>
+            <td>Email ID</td>
+            <td><input name="email" type="email" id="email" /></td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td><input name="mobile" type="tel" id="mobile" /></td>
+          </tr>
+          <tr>
+            <td>Twitter</td>
+            <td><input name="twitter" type="text" id="twitter" /></td>
+          </tr>
+          <tr>
+            <td>URL</td>
+            <td><input name="url" type="url" id="url" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="reset" value="clear" /><input
+                type="submit"
+                value="register"
+              /><input type="file" value="upload" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
