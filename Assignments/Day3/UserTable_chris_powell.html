@@ -31,22 +31,8 @@
         const users = [];
         function addUser(fname,lname,dob,gender){
             tempUser = new User(fname.value,lname.value,dob.value,gender.value);
-            if(checkValues(tempUser)){
-                users.push(tempUser);
-                addToTable(tempUser);
-            }
-            else{
-                alert("First name and/or Last name are null");
-                return;
-            }
-        }
-        function checkValues(user){
-            if(user.fname != null && user.lname != null){
-                return true;
-            }
-            else{
-                return false;
-            }
+            users.push(tempUser);
+            addToTable(tempUser);
         }
         function addToTable(user){
             var table = document.getElementById("table2").getElementsByTagName("tbody")[0];
