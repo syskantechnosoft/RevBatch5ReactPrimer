@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addArr(val1, val2, val3){
+        const arr = [];
+        arr.push(val1);
+        arr.push(val2);
+        arr.push(val3);
+
+            document.getElementById("day3").innerHTML = val1+" "+val2+" "+val3;
+        }
+    </script>
+    <form>
+        <table>
+            <th>Key</th><th>Value</th>
+            <tr><td>First Name :</td><td><input type="text" name="fname"/></td></tr>
+            <tr><td>Last Name :</td><td><input type="text" name="lname"/></td></tr>
+            <tr><td>DOB :</td><td><input type="date" name="dob"/></td></tr>
+            <tr><td><td><input type="button" value="Submit" onclick="addArr(fname.value,lname.value,dob.value)"/><input type="reset" value="Clear" /></td></td></tr>
+            <tr><td>Result in array is :</td><td><textarea id="day3"></textarea></td></tr>
+        </table>
+
+    </form>
+</body>
+</html>
