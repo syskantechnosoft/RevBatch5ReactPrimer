@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function submitForm(){
+            let userInfo = [document.getElementById('fName').value,document.getElementById('lName').value,document.getElementById('monsson').value];
+            document.getElementById("result").innerHTML = "First Name: "+userInfo[0]+" Last Name: "+userInfo[1]+" DOB: "+userInfo[2];
+            alert("Pause Menu!");
+        }
+    </script>
+    <table>
+        <form>
+        <th></th><th></th>
+        <tr><td>First Name</td><td><input id="fName" type="text" required/></td></tr>
+        <tr><td>Last Name</td><td><input id ="lName" type="text"required/></td></tr>
+        <tr><td>Date of Birth</td><td><input id = "monsson" type="date" required/><button type="button" onclick="document.getElementById('monsson').value=''">Clear</button></td></tr>
+        <tr><td><input onclick="submitForm()" type="submit" name="Submit" value="submit" /><input type="reset"/></td></tr>
+        </form>
+    </table>
+    <br>
+    <table>
+        <th>User Inputs</th><th></th>
+        <tr><td><p id="result">zxc</p></td></tr>
+    </table>
+</body>
+</html>
