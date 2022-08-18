@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ananda.css" />
+    <title>Register</title>
+</head>
+<body class="p">
+    <h1>Register</h1>
+    <form action="sigup.html" method="post">
+        <table>
+            <tbody>
+
+                <tr>
+                    <td>First Name</td>
+                    <td> <input name="fName" type="text" id="fName" required /> </td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td> <input name="lName" type="text" id="lName" required /> </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td> 
+                        <input name="gender" type="radio" value="m" /> Male 
+                        <input name="gender" type="radio" value="f" /> Female 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Marital Status</td>
+                    <td> 
+                        <input name="Marital Status" type="radio" 
+                        id="married" onclick="spouseField()"/> Married 
+                        <input name="Marital Status" type="radio"
+                        id="single" onclick="spouseField()"/> Single 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input name="spouseName" type="text" id="spouseName" style="display: none" input type="text" /> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td> <textarea name="address" id="address" cols="40" rows="5"></textarea> </td>
+                </tr>
+
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td> <input name="dob" id="dob"></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Mobile</td>
+                    <td><input type="tel"></td>
+                </tr>
+
+                <tr>
+                    <td>Twitter</td>
+                    <td><input type="url" id="twitter" name="twitter"></td>
+                </tr>
+                
+                <tr>
+                    <td>URL</td>
+                    <td><input type="url"></td>
+                </tr>
+
+                <tr>
+                    <td>Profile</td>
+                    <td><input type="file"></td>
+                </tr>
+
+                <tr>
+                    <td> <input type="reset" value="Clear" /> </td>
+                    <td> <input type="submit" name="register" id="register" value="Register"> </td>
+                </tr>
+
+                <script src="ananda.js"></script>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
