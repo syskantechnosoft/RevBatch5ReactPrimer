@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            #resultTable td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form id="mainForm" name="userDetails" action="" method="get">
+            <table id="details">
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+                    <td>
+                        <input name="name" id="firstName" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name
+                    </td>
+                    <td>
+                        <input name="name" id="lastName" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date of Birth
+                    </td>
+                    <td>
+                        <input name="dob" id="dateOfBirth" type="date">
+                    </td>
+                </tr>
+            </table>
+            <input id="submitButton" name="submit" type="button" value="Submit">
+        </form>
+
+        
+        <script>
+            document.getElementById("submitButton").onclick = function(){
+                if(!document.getElementById("resultTable")){
+                    let detailArray = [document.getElementById("firstName"), document.getElementById("lastName"), document.getElementById("dateOfBirth")]
+                    console.log(detailArray[0])
+                    let table = document.createElement("table")
+                    let row = document.createElement("tr")
+                    let cell = document.createElement("td")
+                    table.setAttribute("id", "resultTable")
+                    document.body.append(table)
+                    
+                    let fNameRow = table.insertRow(0)
+                    fNameRow.insertCell(0).innerHTML = "First Name"
+                    fNameRow.insertCell(1).innerHTML = detailArray[0].value
+                    let lNameRow = table.insertRow(1)
+                    lNameRow.insertCell(0).innerHTML = "Last Name"
+                    lNameRow.insertCell(1).innerHTML = detailArray[1].value
+                    let dobRow = table.insertRow(2)
+                    dobRow.insertCell(0).innerHTML = "Date Of Birth"
+                    dobRow.insertCell(1).innerHTML = detailArray[2].value
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!----->
