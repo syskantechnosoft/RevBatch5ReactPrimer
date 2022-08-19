@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserTable</title>
+    <style>
+        #table2{
+            margin-left: auto;
+            margin-right: auto;
+            margin: 0;
+            border: 1px black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Create an HTML form to get user details like firstName, lastName, dob 
+        and add it to an array, Finally, display all the user inputs in table format.
+    -->
+    <script>
+        class User{
+            constructor(first,last,dob,gender){
+                this.first = first;
+                this.last = last;
+                this.dob = dob;
+                this.gender = gender;
+            }
+        }
+        const users = [];
+        function addUser(fname,lname,dob,gender){
+            tempUser = new User(fname.value,lname.value,dob.value,gender.value);
+            users.push(tempUser);
+            addToTable(tempUser);
+        }
+        function addToTable(user){
+            var table = document.getElementById("table2").getElementsByTagName("tbody")[0];
+            var row = table.insertRow();
+            for(let u in user){
+                var cell = row.insertCell();
+                cell.innerHTML = user[u];
+            }
+        }
+        function clearTable(){
+            var table = document.getElementById("table2").getElementsByTagName("tbody")[0];
+            table.innerHTML="";
+            users.length = 0;
+        }
+    </script>
+    <form action="">
+        <table id="table1">
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="fname" id="fname"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lname" id="lname"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" name="dob" id="dob" value="1900-01-01"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" id="m" value="Male">
+                    <label for="m">Male</label>
+                    <input type="radio" name="gender" id="f" value="Female">
+                    <label for="f">Female</label>
+                    <input type="radio" name="gender" id="nb" value="Non-Binary">
+                    <label for="nb">Non-Binary</label>
+                    <input type="radio" name="gender" id="o" value="Other" checked="checked">
+                    <label for="o">Other</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Clear"></td>
+                <td><input type="button" value="add" onclick="addUser(fname,lname,dob,gender)"></td>
+                <td><input type="reset" value="Clear Table" onclick="clearTable()"></td>
+            </tr>
+        </table>
+        <table id="table2">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </form>
+
