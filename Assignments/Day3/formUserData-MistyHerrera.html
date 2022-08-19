@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ID=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <style>
+            body{
+                background-color:darkseagreen;
+            }
+            table,tr,td{
+                border-style:none;
+            }
+            td{
+                padding: 5pt;
+            }
+            thead{
+                text-decoration: underline;
+                text-decoration-style: solid;
+            }
+            tbody{
+                text-align: left;
+                text-decoration: none;
+                text-decoration-style: none;
+            }
+        </style>
+        <script>
+            const userInfoTable = document.getElementById("displayUserInfo");
+            function displayInfo(){
+                //assignment parameters
+                var info = [];
+                var inputs = document.getElementById("getInfo").getElementsByTagName("input");
+                for (let i = 0; i < inputs.length; i++)
+                    if(inputs[i].type == "text")
+                        info.push(inputs[i].value);
+                userInfoTable.setAttribute("style", "display: block");
+                var newBody = userInfoTable.querySelector("tbody");
+                var newRow = document.createElement("tr");
+                newBody.appendChild(newRow);
+                for(let i = 0; i < info.length; i++){
+                        var newCell = document.createElement("td");
+                        newCell.innerText = info[i];
+                        newRow.appendChild(newCell);
+                }
+                //more efficient
+                /*userInfoTable.setAttribute("style", "display: block");
+                var newBody = userInfoTable.querySelector("tbody");
+                var newRow = document.createElement("tr");
+                newBody.appendChild(newRow);
+                var inputs = document.getElementById("getInfo").getElementsByTagName("input");
+                for (let i = 0; i < inputs.length; i++)
+                    if(inputs[i].type == "text"){
+                        var newCell = document.createElement("td");
+                        newCell.innerText = inputs[i].value;
+                        newRow.appendChild(newCell);
+                    }*/
+            }
+        </script>
+    </head>
+    <body>
+        <form action="displayInfo()" id="getInfo">
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            Item No. 
+                        </td>
+                        <td>
+                            Item Name
+                        </td>
+                        <td>
+                            User Input
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            #1 
+                        </td>
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            <input type="text" id="fName"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #2
+                        </td>
+                        <td>
+                            Last Name:
+                        </td>
+                        <td>
+                            <input type="text" id="lName"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #3
+                        </td>
+                        <td>
+                            Date of Birth:
+                        </td>
+                        <td>
+                            <input type="text" id="dob"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <input type="reset" value="Clear Form"/>
+                            <input type="button" value="Submit" onclick="displayInfo()"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="displayUserInfo" style="display: none;">
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Date of Birth</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </form>
+    </body>
+</html>
