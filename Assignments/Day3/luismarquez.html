@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <table>
+            <tr>
+                <h1>Form Third Day</h1>
+                <td>First Name:</td>
+                <td><input type="text" name="firstName" /></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lastName" /></td>
+            </tr>
+            <tr>
+                <td>Day of Birth:</td>
+                <td><input type="date" name="dobirth" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit"
+                        onclick="createArray(firstName.value,lastName.value,dobirth.value)" />
+                    <input type="reset" value="Clear" />
+                </td>
+
+            </tr>
+        </table>
+        <div>
+            <p id="arrayresult"></p>
+        </div>
+
+        <table>
+            <tr>
+                <td id="firstName"></td>
+            </tr>
+            <tr>
+                <td id="lastName"></td>
+            </tr>
+            <tr>
+                <td id="dobirth"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function createArray(firstName, lastName, dobirth) {
+            const listArray = [];
+            listArray.push(firstName);
+            listArray.push(lastName);
+            listArray.push(dobirth);
+
+            document.getElementById("arrayresult").innerHTML = "Result of array : " + listArray;
+
+            document.getElementById("firstName").innerHTML = "First Name : " + firstName;
+            document.getElementById("lastName").innerHTML = "Last Name : " + lastName;
+            document.getElementById("dobirth").innerHTML = "Day of Birth : " + dobirth;
+        }
+    </script>
+
+</body>
+
+</html>
