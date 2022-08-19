@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <style>
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script type="text/javascript">function addData() {
+            var tbl = document.getElementById("display-data")
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+            var cell3 = row.insertCell();
+            cell1.innerHTML = document.getElementById("mfirstName").value;
+            cell2.innerHTML = document.getElementById("mlastName").value;
+            cell3.innerHTML = document.getElementById("mdateOfBirth").value;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        <table>
+            <th>User Data</th>
+            <tr>
+                <td>First Name: <input type="text" id="mfirstName" /></td>
+            </tr>
+            <tr>
+                <td>Last Name: <input type="text" id="mlastName" /></td>
+            </tr>
+            <tr>
+                <td>Date of Birth: <input type="date" id="mdateOfBirth" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Submit" onclick="addData()">
+                    <button type="reset" value="Clear">Clear</button>
+                </td>
+            </tr>
+        </table><br />
+        <table id="display-data">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Date of Birth</td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
