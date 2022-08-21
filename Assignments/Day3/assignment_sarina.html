@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>  
+function getInfo() {
+            var tbl = document.getElementById("detailEntry")
+            var row = tbl.insertRow();
+            var value1 = row.insertCell();
+            var value2 = row.insertCell();
+            var value3 = row.insertCell();
+            value1.innerHTML = document.getElementById("firstName").value;
+            value2.innerHTML = document.getElementById("lastName").value;
+            value3.innerHTML = document.getElementById("dateOfBirth").value;   
+}
+    </script>  
+<body>
+    <form id="form">
+        <table style=background-color:aquamarine;>
+             <th>Form Details </th>
+              <th> Value</th>
+            <tr> <td>FirstName: </td> <td> <input type ="text" id ="firstName" required/></td></th></tr>
+            <tr> <td>LastName : </td> <td> <input type="text" id="lastName" required/></td> </tr>
+            <tr> <td>DateofBirth : </td> <td> <input type="date" id="dateOfBirth" required/></td> </tr>
+            <td>
+                <input type="button" value="Submit" onclick="getInfo()">
+                <button type="reset" value="Clear">Clear</button>
+            </td>
+        </table>
+        
+        <div>The detail of information is listed below:</div>
+        
+            <table>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>DateofBirth</th>
+            </table>
+
+        <table id="detailEntry" style="background-color:aqua"></table>
+           
+    </form>
+</body>
+</html>
