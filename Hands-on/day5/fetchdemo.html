@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="demo"></div>
+    <script>
+        // let movie= fetch("https://api.themoviedb.org/3/movie/150?api_key=a9a201c957a52859916ab1a66cb3d5e7")
+        async function getUsers() {
+            let url = "https://reqres.in/api/users?page=1";
+            try {
+                let res = await fetch(url);
+                return await res.json();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        async function renderUsers() {
+            let users = await getUsers();
+            let html = '';
+            document.write(` <h3>${users.page} </h3> <h3>${users.total} </h3>`);
+            document.write(`${users.data[0].id} &nbsp; ${users.data[0].first_name} &nbsp; ${users.data[0].last_name} &nbsp; ${users.data[0].email} <br/>`);
+            document.write(`${users.data[1].id} &nbsp; ${users.data[1].first_name} &nbsp; ${users.data[1].last_name} &nbsp; ${users.data[1].email} <br/>`);
+            document.write(`${users.data[2].id} &nbsp; ${users.data[2].first_name} &nbsp; ${users.data[2].last_name} &nbsp; ${users.data[2].email} <br/>`);
+            document.write(`${users.data[3].id} &nbsp; ${users.data[3].first_name} &nbsp; ${users.data[3].last_name} &nbsp; ${users.data[3].email} <br/>`);
+            document.write(`${users.data[4].id} &nbsp; ${users.data[4].first_name} &nbsp; ${users.data[4].last_name} &nbsp; ${users.data[4].email} <br/>`);
+            document.write(`${users.data[5].id} &nbsp; ${users.data[5].first_name} &nbsp; ${users.data[5].last_name} &nbsp; ${users.data[5].email} <br/>`);
+            users.data.forEach(user => {
+                let htmlSegment = `<div class="user">
+                            <img src="${user.avatar}" >
+                            <h2>${user.first_name} ${user.last_name}</h2>
+                            <div class="email"><a href="email:${user.email}">${user.email}</a></div>
+                        </div>`;
+
+                html += htmlSegment;
+            });
+
+            let container = document.getElementById("demo");
+            container.innerText = html;
+        }
+
+        renderUsers();
+        // document.write(movie);
+    </script>
+
+
+</body>
+
+</html>

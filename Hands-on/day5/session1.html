@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The sessionStorage Object</h2>
+
+<p>Person Name is:</p>
+<p id="demo"></p>
+
+<script>
+sessionStorage.setItem("lastname", "Smith");
+let personName = sessionStorage.getItem("lastname");
+document.getElementById("demo").innerHTML = personName;
+</script>
+
+</body>
+</html>
