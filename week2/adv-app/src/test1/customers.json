@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "firstName":"sundar",
+        "lastName":"pitchai",
+        "email":"sundar.pitchai@alphabets.com"
+    },
+    {
+        "id":2,
+        "firstName":"satya",
+        "lastName":"nadella",
+        "email":"satya.nadella@microsoft.com"
+    },
+    {
+        "id":3,
+        "firstName":"mark",
+        "lastName":"zuckerberg",
+        "email":"mark.zuckerberg@facebook.com"
+    },
+    {
+        "id":4,
+        "firstName":"larry",
+        "lastName":"page",
+        "email":"larry.page@google.com"
+    }
+
+]

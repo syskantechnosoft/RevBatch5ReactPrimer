@@ -1,0 +1,26 @@
+[
+    {
+      "id":1,
+      "firstName":"Sundar",
+      "lastName":"pichai",
+      "email":"sundar.pichai@google.com"
+    },
+    {
+      "id":2,
+      "firstName":"Satya",
+      "lastName":"Nadella",
+      "email":"satya.pnadella@microsoft.com"
+    },
+    {
+        "id":3,
+        "firstName":"ABC",
+        "lastName":"EFG",
+        "email":"abc.efg@google.com"
+      },
+      {
+        "id":4,
+        "firstName":"mno",
+        "lastName":"pqr",
+        "email":"mno.pqr@microsoft.com"
+      }
+  ]
