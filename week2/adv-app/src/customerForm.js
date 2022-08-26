@@ -41,7 +41,7 @@ class CustomerForm extends React.Component {
     }
 
     handleSubmit(evt) {
-        evt.preventdefault();
+        evt.preventDefault();
         const newCustomer = this.state;
         console.log('in form :'+this.state);
         this.props.addCustomer(newCustomer);
